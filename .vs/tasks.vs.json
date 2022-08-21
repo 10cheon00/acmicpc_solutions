@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-1018",
+      "appliesTo": "acmicpc_solutions/1018.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-1018",
+      "appliesTo": "acmicpc_solutions/1018.cpp",
+      "type": "launch"
+    }
+  ]
+}
