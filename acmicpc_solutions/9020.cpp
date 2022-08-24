@@ -1,6 +1,6 @@
 /*
- * 9020 °ñµå¹ÙÈåÀÇ ÃßÃø
- * ½Ç¹öII
+ * 9020 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+ * ï¿½Ç¹ï¿½II
  */
 
 #include <iostream>
@@ -8,25 +8,33 @@
 
 using namespace std;
 
-bool isPrime(int n) {
-    for (int i = 2; i <= sqrt(n); i++) {
-        if (n % i == 0) {
+bool isPrime(int n)
+{
+    for (int i = 2; i <= sqrt(n); i++)
+    {
+        if (n % i == 0)
+        {
             return false;
         }
     }
     return true;
 }
 
-int main() {
+int main()
+{
     int length;
     cin >> length;
-    int* numbers = new int[length];
-    for (int i = 0; i < length; i++) {
+    int *numbers = new int[length];
+    for (int i = 0; i < length; i++)
+    {
         cin >> numbers[i];
     }
-    for (int i = 0; i < length; i++) {
-        for (int j = numbers[i] / 2; j >= 2; j--) {
-            if (isPrime(j) && isPrime(numbers[i] - j)) {
+    for (int i = 0; i < length; i++)
+    {
+        for (int j = numbers[i] / 2; j >= 2; j--)
+        {
+            if (isPrime(j) && isPrime(numbers[i] - j))
+            {
                 cout << j << ' ' << numbers[i] - j << endl;
                 break;
             }
