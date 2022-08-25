@@ -33,9 +33,10 @@ int main() {
   int N;
   dp[0] = vector<int>{1};
   dp[1] = vector<int>{1};
-  while (scanf("%d", &N) > 0) {
+  while (scanf("%d", &N) != EOF) {
     vector<int> res = f(N);
     for (auto i = res.rbegin(); i != res.rend(); i++)
-      printf("%d\n", *i);
+      printf("%d", *i);
+    puts("");
   }
 }
