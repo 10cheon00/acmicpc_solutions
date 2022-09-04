@@ -13,14 +13,10 @@ int main() {
   R = N * N;
   while (x <= N && y >= 0) {
     LL nextDownLeft = dist(x + 1, y);
-    if (nextDownLeft < R)
-      x = x <= N ? x + 1 : x;
-    else if (nextDownLeft > R)
-      y = y >= 0 ? y - 1 : y;
-    else {
-      x = x <= N ? x + 1 : x;
-      y = y >= 0 ? y - 1 : y;
-    }
+    if (nextDownLeft <= R)
+      x++;
+    if (nextDownLeft >= R)
+      y--;
     cnt++;
   }
   printf("%lld", cnt * 4);
