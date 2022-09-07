@@ -1,5 +1,5 @@
 /*
- * 떡 먹는 호랑이
+ * 2502 떡 먹는 호랑이
  * 실버I
 1  a
 2  b
@@ -11,10 +11,10 @@
   = fibonacci(D-1) * A + fibonacci(D-2) * B
 */
 #include <iostream>
-int dp[32]{0, 1}, A = 0, B = 0;
+int dp[30]{0, 1}, A = 0, B = 0;
 int main() {
   int D, K;
-  for (int i = 2; i < 32; i++) {
+  for (int i = 2; i < 30; i++) {
     dp[i] = dp[i - 1] + dp[i - 2];
   }
   scanf("%d %d", &D, &K);
